@@ -18,7 +18,8 @@ defmodule Server do
     return_pid_tuple
   end
 
-  @spec get_truck_reviews(pid() | module(), String.t()) :: {:error, :truck_not_found} | {:ok, any()}
+  @spec get_truck_reviews(pid() | module(), String.t()) ::
+          {:error, :truck_not_found} | {:ok, any()}
   @doc """
   Retrieve any truck reviews for a given truck name
   """
@@ -132,7 +133,7 @@ defmodule Server do
 
     Enum.each(users, fn user ->
       Enum.each(trucks, fn truck ->
-        add_truck_review(Server, truck, (Enum.random(1..10) / 1), user)
+        add_truck_review(Server, truck, Enum.random(1..10) / 1, user)
       end)
     end)
   end
