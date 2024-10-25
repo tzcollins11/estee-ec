@@ -44,7 +44,9 @@ iex> Server.get_truck_average_rating(Server, "Curry Up Now")
 For ease of use, whens starting the application server I have preseeded the application with reviews from some users with random scores on the following resteraunts.
 
 Quan Catering
+
 Brazuca Grill
+
 Treats by the Bay LLC
 
 For Example
