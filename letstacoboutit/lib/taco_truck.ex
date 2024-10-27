@@ -1,12 +1,17 @@
 defmodule TacoTruck do
   @moduledoc """
   A Taco truck has a name and list of ratings associated with that truck
+
+  ##Example
+     %TacoTruck{name: "Tacos", Reviews: [%Review{}]}
   """
   defstruct [:name, reviews: []]
 
   @spec avg_rating(any()) :: float()
   @doc """
   Get average rating, if there are no ratings yet, return 0. Always round down to 2 decimals.
+
+  Returns floating number
   """
   def avg_rating(%{reviews: []}), do: 0
 
